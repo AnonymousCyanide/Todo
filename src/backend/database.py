@@ -2,8 +2,9 @@ from models import Todo , SaveTodo
 from bson.objectid import ObjectId
 from pymongo import MongoClient
 
+pwd = ''
 
-client = MongoClient("mongodb+srv://avidubey2000:6Zkwf7LFM3lcHtwC@cluster0.o3scw1k.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client = MongoClient(f"mongodb+srv://avidubey2000:{pwd}@cluster0.o3scw1k.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 database = client.TodoApp
 collection = database.todo
